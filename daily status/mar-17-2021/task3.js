@@ -1,64 +1,23 @@
-const a=[1,'1','Name',[1,2],true];
-const result=a.map((obj)=>{
-    return (typeof(obj));
-})
-console.log(result);   
+//reduce
 
-o/p  ["number", "string", "string", "object", "boolean"]
-
-
-var bike=["duke","ktm","rx100","enfield"];
-console.log(bike.toString());   //toString
+const value =[1,2,3,4,5,6,7,8,9,10] ;
+const result = value.reduce((acc, ele) => {
+  const type = ele % 2 === 0 ? 'even' : 'odd';
+  acc[type].push(ele);
+  return acc;
+}, );
+console.log('The result', result);
 
 
-console.log(bike.join("*"));    //join
-
-bike.pop();
-console.log(bike);  //pop
-
-bike.push("FZ");
-console.log(bike);  //push
 
 
-bike.shift();
-console.log(bike);  //shift
-
-bike.unshift("FZ");
-console.log(bike);   //unShift
-
-
-delete bike[0];
-console.log(bike);   //delete
-
- bike.splice(2,0, "R15","ZMP");
- console.log(bike);     //splice
-
-bike.splice(2,1);
-console.log(bike);     //remove splice
+const a = [100,200,300,400,500,600,700,800,900,1000];
+const bonus = 100;
+const result = a.reduce((acc, ele) => {
+    acc=acc+ele;
+    console.log(acc,ele);
+return acc;
+},bonus);
 
 
-var a=["varshy","surya","vaishu","guru"];
-console.log(a.slice(1));       //slice
 
-
-console.log(a.sort());   //sort
-
-
-console.log(a.reverse());   //Reverse
-
-
-var a=[10,20,5,3,40];
-a.sort(function(a,b) {return a-b});
-console.log(a);                //numeric sort
-
-
-var a=[10,20,5,3,40];
-a.sort(function(a,b) {return b-a});
-console.log(a);       //Numeric sort
-
-
-const a=[1,'1','Name',[1,2],true];
-a.map((x)=>{
-    return typeof(x);
-})
-console.log(a);
